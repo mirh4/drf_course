@@ -243,26 +243,26 @@ http http://api:8000/item/ 'Authorization: Token **your_token**'
 
 curl -X GET -H 'Authorization: Token **your_token**' http://api:8000/item/**your_item_uuid**/
 
-http http://api:8000/item/**your_item_uuid**/ 'Authorization: Token **your_token**' 
+http http://api:8000/item/a14bfed5-0f96-44ed-8353-5951ec55972c/ 'Authorization: Token c47b573a3e3fa6b7cf345c3393d950d2ef1efc02' 
 
 > This retrieve all orders
 
 curl -X GET -H 'Authorization: Token **your_token**' http://api:8000/order/
 
-http http://api:8000/order/ 'Authorization: Token **your_token**'
+http http://api:8000/order/ 'Authorization: Token c47b573a3e3fa6b7cf345c3393d950d2ef1efc02'
 
 > This will place an order for item id = **your_item_uuid** quantity = 1
 
 curl -X POST -H 'Content-Type: application/json' -H 'Authorization: Token **your_token**' -d '{"item": "**your_item_uuid**", "quantity": "1"}' http://api:8000/order/
 
-http http://api:8000/order/ 'Authorization: Token **your_token**' item="**your_item_uuid**" quantity="1"
+http http://api:8000/order/ 'Authorization: Token c47b573a3e3fa6b7cf345c3393d950d2ef1efc02' item="a14bfed5-0f96-44ed-8353-5951ec55972c" quantity="1"
 
 
 > This get order id = **your_order_uuid**
 
 curl -X GET -H 'Authorization: Token **your_token**' http://api:8000/order/**your_order_uuid**/
 
-http http://api:8000/order/**your_order_uuid**/ 'Authorization: Token **your_token**'
+http http://api:8000/order/14e6c355-5f22-4404-b07c-1ea626a96227/ 'Authorization: Token c47b573a3e3fa6b7cf345c3393d950d2ef1efc02'
 
 > This will create a contact request
 
